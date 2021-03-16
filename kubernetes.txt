@@ -19,3 +19,6 @@ cgloud services enable container.gppgleapis.com
 ls
 pwd
 git clone https://github.com/GoogleCloudPlatform/kubernetes-engine-samples
+FINISH
+kubectl delete service hello-app-service
+gcloud container cluster delete hello-cluster
