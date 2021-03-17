@@ -16,3 +16,12 @@
 gcloud init
 31  gcloud services enable container.googleapis.com
 32  git clone https://github.com/GoogleCloudPlatform/kubernetes-engine-samples
+export PROJECT_ID=tokyo-portal-304417
+37  echo $PROJECT_ID
+39  cd kubernetes-engine-samples/
+42  cd hello-app
+43  ls
+44  cat Dockerfile
+49  docker build -t gcr.io/${PROJECT_ID}/hello-app:v1 .
+50  docker ps
+51  docker images
