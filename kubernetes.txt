@@ -13,7 +13,6 @@
 12  docker --version
 13 apt-cache search kubectl
 14  apt install kubectl
-ne uspel
 gcloud init
 cgloud services enable container.gppgleapis.com
 ls
