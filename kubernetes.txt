@@ -41,3 +41,19 @@ gcloud config set project $PROJECT_ID
 69  docker images
 70  kubectl create deployment hello-app --image=gcr.io/tokyo-portal-304417/hello-app:v1
 73  kubectl scale deployment hello-app --replicas=3
+75  kube autoscale deployment hello-app --cpu-percent=80 --min=1 --max=5
+76  kubectl autoscale deployment hello-app --cpu-percent=80 --min=1 --max=5
+77  kubectl get pods
+78  kubectl expose deployment hello-app --name=hello-app-service --type=LoadBalancer --port 8- --target-port 8080
+79  kubectl expose deployment hello-app --name=hello-app-service --type=LoadBalancer --port 80 --target-port 8080
+80  kubectl get service
+81  dcoker images
+82  docker images
+83  docker build -t gcr.io/tokyo-portal-304417/hello-app:v2 .
+84  docker images
+85  dcoker push gcr.io/tokyo-portal-304417/hello-app:v2
+86  docker push gcr.io/tokyo-portal-304417/hello-app:v2
+87  kubectl set image deployment/hello-app hello-app=gcr.io/tokyo-portal-304417/hello-app:v2
+88  watch kubectl get pods
+89  kubectl delete service hello-app-service
+90  gcloud container clusters delete hello-cluster
