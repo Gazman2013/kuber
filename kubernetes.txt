@@ -36,5 +36,8 @@ gcloud config set project $PROJECT_ID
 62  gcloud compute zone list
 63  gcloud compute zones list
 64  gcloud config set compute/zone europe-north1-a
-65  gcloud container cluster create hello-cluster
 66  gcloud container clusters create hello-cluster
+67 gcloud compute instances list
+69  docker images
+70  kubectl create deployment hello-app --image=gcr.io/tokyo-portal-304417/hello-app:v1
+73  kubectl scale deployment hello-app --replicas=3
