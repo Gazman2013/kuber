@@ -14,10 +14,5 @@
 13 apt-cache search kubectl
 14  apt install kubectl
 gcloud init
-cgloud services enable container.gppgleapis.com
-ls
-pwd
-git clone https://github.com/GoogleCloudPlatform/kubernetes-engine-samples
-FINISH
-kubectl delete service hello-app-service
-gcloud container cluster delete hello-cluster
+31  gcloud services enable container.googleapis.com
+32  git clone https://github.com/GoogleCloudPlatform/kubernetes-engine-samples
