@@ -1,0 +1,170 @@
+gke-with-custom-fluentd  us-east1-b  1.18.12-gke.1210  34.75.23.149  e2-medium     1.18.12-gke.1210  3          RUNNING
+
+174  kuberctl --version
+  175  gcloud init
+  176  gcloud services enable container.googleapis.com
+  177  gcloud container clasters create levelup2
+  178  gcloud container clusters create levelup2
+  179  gcloud container clusters delete hello-cluster
+  180  gcloud init
+  181  gcloud container clusters create levelup2
+  182  gcloud containers clasters get-credentials levelup2
+  183  gcloud container clusters get-credentials levelup2
+  184  kubectl get nodes
+  185  kubectl get pods
+  186  kubectl get podes
+  187  dcoker images
+  188  docker images
+  189  kubectl create deployment first-deploy --image=levelup2spb/automatingdeploy
+  190  docker images
+  191  kubectl get deploy
+  192  kubectl get pods
+  193  kubectl get deskribe first-deploy-584b9d9544-76sn6
+  194  kubectl describe pods first-deploy-584b9d9544-76sn6
+  195  kubectl get deploy
+  196  kubectl get deployments first-deploy
+  197  kubectl get pods
+  198  kubectlscale deployment first-deploy --replicas 5
+  199  kubectl scale deployment first-deploy --replicas 5
+  200  kubectl get pods
+  201  kubectl autoccale deployment first-depoly --min=4 --max=6 --cpu-percent=60
+  202  kubectl autoscale deployment first-depoly --min=4 --max=6 --cpu-percent=60
+  203  kubectl autoscale deployment first-deploy --min=4 --max=6 --cpu-percent=60
+  204  kuberctl get deploy
+  205  kubectl get deploy
+  206  kubectl get hpa
+  207  kubectl rollout history deployment/first-deploy
+  208  docker images
+  209* kubectl set
+  210  kubectl rollout history deployment/first-deploy
+  211  kubectl set image deployment/first-deploy automatingdeploy=levelup2spb/automatingdeploy:latest --record
+  212  kubectl rollout history deployment/first-deploy
+  213  kubectl rollout status deployment/first-deploy
+  214  kubectl rollout undo deployment/first-deploy
+  215  kubectl rollout history deployment/first-deploy
+  216  kubectl rollout undo deployment/first-deploy
+  217  kubectl rollout history deployment/first-deploy
+  218  kubectl rollout undo deployment/first-deploy --to-revision=5
+  219  kubectl rollout undo deployment/first-deploy --to-revision=1
+  220  kubectl rollout undo deployment/first-deploy --to-revision=2
+  221  kubectl rollout undo deployment/first-deploy --to-revision=3
+  222  kubectl rollout history deployment/first-deploy
+  223  kubectl get pods
+  224  ls
+  225  mkdir manifest
+  226  chmod 777 manifest
+  227  cd manifest/
+  228  touch deploy.yml
+  229  nano deploy.yml
+  230  kubectl apply -f deploy.yml
+  231  nano deploy.yml
+  232  nano deploy.yml
+  233  kubectl apply -f deploy.yml
+  234  nano deploy.yml
+  235  kubectl apply -f deploy.yml
+  236  nano deploy.yml
+  237  kubectl apply -f deploy.yml
+  238  nano deploy.yml
+  239  kubectl apply -f deploy.yml
+  240  cp deploy.yml deploy2.yml
+  241  nano deploy2.yml
+  242  kubectl get deploy
+  243  kubectl port-forward my-web-deployment 2222:80
+  244  kubectl get pods
+  245  kubectl port-forward my-web-deployment-75b6ddd7df-lxd5z 2222:80
+  246  kubectl delete -f deploy2.yml
+  247  kubectl get deploy
+  248  cp deploy.yml deploy3.yml
+  249  nano deploy3.yml
+  250  kubectl get pods
+  251  apply -f deploy3.yml
+  252  kubectl apply -f deploy3.yml
+  253  nano deploy3.yml
+  254  kubectl apply -f deploy3.yml
+  255  nano deploy3.yml
+  256  kubectl apply -f deploy3.yml
+  257  nano deploy3.yml
+  258  kubectl apply -f deploy3.yml
+  259  nano deploy3.yml
+  260  kubectl apply -f deploy3.yml
+  261  nano deploy3.yml
+  262  touch podman.yml
+  263  nano podman.yml
+  264  kubectl apply -f podman.yml
+  265  kuberctl get pods
+  266  kubectl get pods
+  267  kubectl logs my-web
+  268  kubectl exec my-web ls
+  269  kubectl exec -it my-web bash
+  270  nano podman.yml
+  271  kubectl describe nodes
+  272  kubectl get pods
+  273  kubectl describe pods my-web
+  274  kubectl delete pods my-web
+  275  nano podman.yml
+  276  kubectl apply -f podman.yml
+  277  nano podman.yml
+  278  kubectl apply -f podman.yml
+  279  kubectl get pods
+  280  kubectl port-forward my-try3 4444:80
+  281  kubectl get pods
+  282  kubectl delete-f
+  283  ls
+  284  kubectl delete -f deploy.yml
+  285  kubectl delete -f deploy2.yml
+  286  kubectl delete -f deploy2.yml
+  287  kubectl delete -f deploy3.yml
+  288  kubectl delete -f podman.yml
+  289  ls -la
+  290  kubectl delete -f deploy.yml
+  291  kubectl grt deploy
+  292  kubectl get deploy
+  293  kubectl delete first-deploy
+  294  kubectl get deploy
+  295  kubectl get deploy first-deploy
+  296  kubectl get deploy
+  297  kubectl delete deploy first-deploy
+  298  kubectl get deploy
+  299  kubectl create deployment levelup-deploy --image levelup2spb/automatingdeploy
+  300  kubectl create deployment levelup-deploy --replicas 4
+  301  kubectl create scale deploy levelup-deploy --replicas 4
+  302  kubectl scale deploy levelup-deploy --replicas 4
+  303  kubectl get pods
+  304  kubectl get deploy
+  305  kubectl get replicas
+  306  kubectl expose deployment levelup-deploy --type-ClusterIP --port 80
+  307  kubectl expose deployment levelup-deploy --type=ClusterIP --port 80
+  308  kuberctl get services
+  309  kubectl get services
+  310  kubectl delete services levelup-deploy
+  311  kubectl expose deployment levelup-deploy --type=NodePort --port 80
+  312  kubectl get services
+  313  kubectl descrime nodes|grep ext -i
+  314  kubectl describe nodes|grep ext -i
+  315  kubectl delete services levelup-deploy
+  316  kuberctl expose deployment levelip-deploy --type=LoadBalancer --port 80
+  317  kubectl expose deployment levelip-deploy --type=LoadBalancer --port 80
+  318  kubectl expose deployment levelup-deploy --type=LoadBalancer --port 80
+  319  kubectl get svc
+  320  kubectl get pods
+  321  ды
+  322  ls
+  323  git clone https://github.com/GoogleCloudPlatform/kubernetes-engine-customize-fluentd.git
+  324  ls
+  325  cd kubernetes-engine-customize-fluentd/
+  326  ls -la
+  327  gcloud beta container clusters create gke-with-custom-fluentd    --zone us-east1-b    --enable-logging-monitoring-system-only    --tags=gke-cluster-with-customized-fluentd    --scopes=logging-write
+  328  kubectl apply -f kubernetes/test-logger.yaml
+  329  ls -la
+  330  kubectl log
+  331  kubectl logs
+  332  kubectl get logs
+  333  kubectl apply -f kubernetes/daemonset.yams
+  334  kubectl apply -f kubernetes/daemonset.yaml
+  335  kubectl apply -f kubernetes/fluents-daemonset.yaml
+  336  kubectl apply -f kubernetes/fluentd-daemonset.yaml
+  337  kuberctl grt pods --mamespace=kube
+  338  ls
+  339  nano create-cluster.sh
+  340  history
+
